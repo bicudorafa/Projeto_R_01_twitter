@@ -70,7 +70,7 @@ Aqui, instalam-se os pacotes tidytext, stringr e stopwords para text mining. Com
 ```{r textmining, message=FALSE, warning=FALSE}
 ## Etapa 2: Tratamento dos dados
 
-# Ativa??o dos pacotes necess?rios ao Text Mining e manipula??o dos dados
+# Ativacao dos pacotes necessarios ao Text Mining e manipulacao dos dados
 library(tidytext)
 library(stringr)
 library(stopwords)
@@ -89,8 +89,8 @@ tweets_text$text <- tweets_text$text %>%
 tweets_tidy <- tweets_text %>%   
   unnest_tokens(word, text) %>% # Transformando texto em tokens
   filter(!word %in% c("https", "t.co", "amp", 'http', 'htt','bmr9ju8t8y', 'fwplgwxu4o', 'f0', 'es','009f','00a0', 'ac', 'sa3', '008e', '00bc'),   # Removendo alguns lixos conhecidos
-         !word %in% tolower(tweetsSearch$screen_name), # Removendo nome de usu?rios
-         !grepl("^\\d+$", word)) # Removendo n?meros
+         !word %in% tolower(tweetsSearch$screen_name), # Removendo nome de usuarios
+         !grepl("^\\d+$", word)) # Removendo numeros
 
 # Definicao das stopwords
 stopwords_assunto <- c('nao', 'sao', 'pra', 'q', 'dolly','r', 'u', 'refrigerante', 'refrigerantes')
@@ -173,7 +173,7 @@ Por ultimo, pode-se proceder a analise de sentimento. A partir do pacote lexicon
 ```{r analise, message=FALSE, warning=FALSE}
 ## Analise de Sentimento (Opinion Mining)
 
-# Carregando pacotes necess?rios
+# Carregando pacotes necessarios
 # devtools::install_github("sillasgonzaga/lexiconPT")
 library(lexiconPT)
 library(tidyr)
