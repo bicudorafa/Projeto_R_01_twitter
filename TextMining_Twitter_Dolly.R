@@ -3,7 +3,8 @@
 
 ## Etapa 1: Autenticao, conexao e captura dos tweets
 
-# Ativaao dos pacotes necessarios ao Text Mining e manipulacao dos dados
+# Ativacao dos pacotes necessarios ao Text Mining e manipulacao dos dados
+#install.packages(c('rtweet', 'dplyr'))
 library(rtweet)
 library(dplyr)
 
@@ -32,6 +33,7 @@ select(tweet_id, text)
 ## Etapa 2: Tratamento dos dados
 
 # Ativacao dos pacotes necessarios ao Text Mining e manipulacao dos dados
+#install.packages(c('tidytext', 'stringr', 'stopwords'))
 library(tidytext)
 library(stringr)
 library(stopwords)
@@ -71,6 +73,7 @@ tweets_tidy %>%
 ## Etapa 3: Wordcloud, analise das associacoes entre as palavras e clusterizacao hierarquica (dendogramas)
 
 # Wordcloud
+#install.packages(c('wordcloud', 'RColorBrewer'))
 library(wordcloud)
 library(RColorBrewer)
 
@@ -82,6 +85,7 @@ tweets_tidy %>%
                  colors = brewer.pal(8, "Dark2")))
 
 # Criacao do Corpus e TDM para analise lexica
+#install.packages('tm')
 library(tm)
 
 tweets_tdm <- tweets_tidy %>%
@@ -118,7 +122,8 @@ rect.hclust(tweets_hclust, k = 5, border = "red")
 ## Analise de Sentimento (Opinion Mining)
 
 # Carregando pacotes necessarios
-devtools::install_github("sillasgonzaga/lexiconPT")
+#install.packages(c('devtools', 'tidyr'))
+#devtools::install_github("sillasgonzaga/lexiconPT")
 library(lexiconPT)
 library(tidyr)
 
