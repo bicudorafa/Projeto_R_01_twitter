@@ -1,4 +1,4 @@
-# Projeto_R_01_twitter
+# Projeto_R_twitter
 Projeto com a finalidade de realizar text/opinion mining na plataforma Twitter para obtenção de insights e outras informações sobre o assunto escolhido, no caso, o trending topic do dia - a prisão do presidente das Empresas Dolly.
 
 # Instruções
